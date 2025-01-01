@@ -1,15 +1,24 @@
 {
-   "search.exclude": {
-      "**/package-lock.json": true,
-      "**/node_modules": true,
-      "**/.next": true,
-      "**/dist": true,
-      "**/yarn.lock": true,
-      "**/bun.lockb": true
-   },
-   "eslint.workingDirectories": [
-      "./apps/storefront",
-      "./apps/admin",
-      "./apps/storefront/.react-email"
-   ]
+  "search.exclude": {
+    "**/package-lock.json": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/yarn.lock": true,
+    "**/bun.lockb": true
+  },
+  "eslint.workingDirectories": [
+    "./apps/storefront",
+    "./apps/admin",
+    "./apps/storefront/.react-email"
+  ],
+  "task.allowAutomaticTasks": true,
+  "debug.openDebug": "neverOpen",
+  "terminal.integrated.inheritEnv": false,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
 }
